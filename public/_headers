@@ -1,0 +1,53 @@
+/*
+  Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+  Cross-Origin-Opener-Policy: same-origin
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: DENY
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), geolocation=(), microphone=(), payment=(), usb=()
+  Content-Security-Policy: default-src 'self'; script-src 'self' https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data:; connect-src 'self' https://cloudflareinsights.com; object-src 'none'; base-uri 'self'; frame-ancestors 'none'; form-action 'self'; upgrade-insecure-requests
+
+# Content-hashed filenames, so they can never go stale.
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Unhashed and replaced in place, so paths are listed explicitly rather than by
+# extension: a day in the browser, a week at the edge, stale copy served while
+# revalidating. Add a line here when adding an image.
+/armemon.webp
+  Cache-Control: public, max-age=86400, s-maxage=604800, stale-while-revalidate=86400
+/withinbench-preview.webp
+  Cache-Control: public, max-age=86400, s-maxage=604800, stale-while-revalidate=86400
+/titlania-preview.webp
+  Cache-Control: public, max-age=86400, s-maxage=604800, stale-while-revalidate=86400
+/og-card.png
+  Cache-Control: public, max-age=86400, s-maxage=604800, stale-while-revalidate=86400
+/icon-192.png
+  Cache-Control: public, max-age=604800
+/apple-touch-icon.png
+  Cache-Control: public, max-age=604800
+/favicon.svg
+  Cache-Control: public, max-age=604800
+
+# HTML and the crawler files must always revalidate, or a deploy takes days to
+# reach anyone who has already visited.
+/
+  Cache-Control: public, max-age=0, must-revalidate
+/index.html
+  Cache-Control: public, max-age=0, must-revalidate
+/404.html
+  Cache-Control: public, max-age=0, must-revalidate
+/llms.txt
+  Cache-Control: public, max-age=0, must-revalidate
+/sitemap.xml
+  Cache-Control: public, max-age=0, must-revalidate
+/robots.txt
+  Cache-Control: public, max-age=0, must-revalidate
+/site.webmanifest
+  Cache-Control: public, max-age=0, must-revalidate
+
+https://:project.pages.dev/*
+  X-Robots-Tag: noindex
+
+https://:version.:project.pages.dev/*
+  X-Robots-Tag: noindex

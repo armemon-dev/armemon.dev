@@ -1,0 +1,8 @@
+node_modules/
+dist/
+.prerender/
+withinBENCH/
+*.log
+.env
+.env.*
+!.env.example

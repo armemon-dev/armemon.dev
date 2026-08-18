@@ -1,0 +1,14 @@
+{
+  "name": "Ahmed Raza Memon (armemon)",
+  "short_name": "armemon",
+  "description": "Portfolio of Ahmed Raza Memon, product developer.",
+  "start_url": "/",
+  "display": "browser",
+  "background_color": "#0f172a",
+  "theme_color": "#0f172a",
+  "icons": [
+    { "src": "/icon-192.png", "type": "image/png", "sizes": "192x192" },
+    { "src": "/apple-touch-icon.png", "type": "image/png", "sizes": "180x180" },
+    { "src": "/favicon.svg", "type": "image/svg+xml", "sizes": "any", "purpose": "any" }
+  ]
+}
