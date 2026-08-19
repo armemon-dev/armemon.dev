@@ -5,8 +5,12 @@ export const ORIGIN = 'https://armemon.dev'
 const personId = `${ORIGIN}/#ahmed-raza-memon`
 const photoId = `${ORIGIN}/#photo`
 
-/** Build stamp, so dateModified and the sitemap never drift apart. */
-export const LAST_MODIFIED = new Date().toISOString().slice(0, 10)
+/**
+ * Build stamp, so dateModified and the sitemap never drift apart. Google's
+ * ProfilePage validator rejects a date-only dateModified, so keep the time and
+ * zone on it; <lastmod> accepts the same full form.
+ */
+export const LAST_MODIFIED = new Date().toISOString().replace(/\.\d{3}Z$/, 'Z')
 
 /**
  * The portrait, declared as a full ImageObject and referenced by the Person.
