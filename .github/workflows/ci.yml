@@ -1,0 +1,40 @@
+name: CI
+
+# Runs on feature branches and on pull requests into main. Pushes to main are
+# not covered here: that branch is built and deployed by Cloudflare Pages, and
+# anything reaching it has already passed this workflow on the way in.
+on:
+  push:
+    branches-ignore: [main]
+  pull_request:
+    branches: [main]
+
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    name: Build and verify
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out the repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          # .nvmrc is the single source of truth, so CI and Cloudflare Pages
+          # cannot drift onto different major versions of Node.
+          node-version-file: .nvmrc
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build
+        run: npm run build
+
+      - name: Verify the build output
+        run: npm run verify
