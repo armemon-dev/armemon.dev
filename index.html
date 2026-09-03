@@ -10,6 +10,15 @@
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-5MP9WTNZ');</script>
     <!-- End Google Tag Manager -->
+    <!-- Titlania widget key. It lives here rather than on the GTM tag because a
+         GTM Custom HTML tag rebuilds an external <script> from a hardcoded
+         {async, id, text, charset} list and drops every data-* attribute, so
+         data-titlania never reaches the widget and it aborts silently. This
+         global is the widget's other supported input. GTM still decides
+         WHETHER the widget loads; this only says which widget it is. Editing
+         this line changes its sha256, so update script-src in public/_headers
+         to match or the browser will refuse it. -->
+    <script>window.titlaniaWidgetId="pk_enksp96gzq9thd28eyycxzcqqr"</script>
     <meta name="theme-color" content="#0f172a" />
     <meta name="color-scheme" content="dark" />
     <meta name="author" content="Ahmed Raza Memon" />

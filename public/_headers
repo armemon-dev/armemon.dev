@@ -3,7 +3,11 @@
 # cannot: 'strict-dynamic' would only cover script-src, and a tag's data
 # connections (connect-src) and images (img-src) always need naming here.
 #
-# Titlania (the support widget, installed as a GTM Custom HTML tag):
+# Two inline-script hashes, no 'unsafe-inline': the GTM loader, and the one
+# line in index.html that sets window.titlaniaWidgetId. Both are byte-exact
+# — editing either script without updating its hash here breaks it silently.
+#
+# Titlania (the support widget, loaded by a GTM Custom HTML tag):
 #   script-src   widget.titlania.com   the bundle itself
 #   connect-src  cdn.titlania.com      published bot document, fetched on open
 #   connect-src  api.titlania.com      conversations, + wss for the live socket
@@ -16,7 +20,7 @@
   X-Frame-Options: DENY
   Referrer-Policy: strict-origin-when-cross-origin
   Permissions-Policy: camera=(), geolocation=(), microphone=(), payment=(), usb=()
-  Content-Security-Policy: default-src 'self'; script-src 'self' 'sha256-ZfcJ+gN5TRGxf+dyZocUEbwyJ3Gc/2uplfIkyzWFmdg=' https://static.cloudflareinsights.com https://www.googletagmanager.com https://widget.titlania.com; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data: https://www.googletagmanager.com https://*.google-analytics.com https://*.g.doubleclick.net https://cdn.titlania.com https://lh3.googleusercontent.com; connect-src 'self' https://cloudflareinsights.com https://www.googletagmanager.com https://*.google-analytics.com https://*.analytics.google.com https://*.g.doubleclick.net https://cdn.titlania.com https://api.titlania.com wss://api.titlania.com; frame-src https://www.googletagmanager.com; object-src 'none'; base-uri 'self'; frame-ancestors 'none'; form-action 'self'; upgrade-insecure-requests
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'sha256-ZfcJ+gN5TRGxf+dyZocUEbwyJ3Gc/2uplfIkyzWFmdg=' 'sha256-0g7AEWGWcMTQeAFAD3wMtiD9ik8Ra8ldhcig2Cm5Lgw=' https://static.cloudflareinsights.com https://www.googletagmanager.com https://widget.titlania.com; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data: https://www.googletagmanager.com https://*.google-analytics.com https://*.g.doubleclick.net https://cdn.titlania.com https://lh3.googleusercontent.com; connect-src 'self' https://cloudflareinsights.com https://www.googletagmanager.com https://*.google-analytics.com https://*.analytics.google.com https://*.g.doubleclick.net https://cdn.titlania.com https://api.titlania.com wss://api.titlania.com; frame-src https://www.googletagmanager.com; object-src 'none'; base-uri 'self'; frame-ancestors 'none'; form-action 'self'; upgrade-insecure-requests
 
 # Content-hashed filenames, so they can never go stale.
 /assets/*
