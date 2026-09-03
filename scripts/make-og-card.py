@@ -48,7 +48,7 @@ CARD = {
         ("  live", "regular", ACCENT),
         ("   ", "regular", DIM),
         ("titlania.com", "bold", SLATE_LIGHT),
-        ("  in development", "regular", DIM),
+        ("  live", "regular", ACCENT),
         ("   and more", "regular", DIM),
     ],
     "stack": ["React", "React Native", "Next.js", "TypeScript", "Firebase", "Cloudflare"],
