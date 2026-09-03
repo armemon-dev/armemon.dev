@@ -26,7 +26,7 @@ const sitemapUrls = [
     images: [
       { loc: `${ORIGIN}/armemon.webp`, title: 'Ahmed Raza Memon (armemon)', caption: 'Ahmed Raza Memon, product developer, known online as armemon.' },
       { loc: `${ORIGIN}/withinbench-preview.webp`, title: 'WithinBench', caption: 'WithinBench, a free browser workshop built by Ahmed Raza Memon.' },
-      { loc: `${ORIGIN}/titlania-preview.webp`, title: 'Titlania', caption: 'Titlania, an independent product in development by Ahmed Raza Memon.' },
+      { loc: `${ORIGIN}/titlania-preview.webp`, title: 'Titlania', caption: 'Titlania, a customer-support widget built by Ahmed Raza Memon.' },
     ],
   },
 ]

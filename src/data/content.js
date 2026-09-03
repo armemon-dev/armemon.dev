@@ -4,7 +4,7 @@ export const experience = [
     title: 'Product Developer',
     company: 'Independent Products',
     description:
-      'Design, build, ship and maintain WithinBench end to end: product direction, interface, the full Next.js implementation, hardened Cloudflare Workers, deployment and legal pages. Developing Titlania alongside it. Sole owner of both codebases and every decision in them.',
+      'Design, build, ship and maintain WithinBench end to end: product direction, interface, the full Next.js implementation, hardened Cloudflare Workers, deployment and legal pages. Building, shipping and maintaining Titlania alongside it. Sole owner of both codebases and every decision in them.',
     tags: ['Product development', 'React', 'Next.js', 'TypeScript', 'Cloudflare'],
   },
   {
@@ -34,9 +34,10 @@ export const projects = [
     name: 'Titlania',
     href: 'https://titlania.com',
     image: '/titlania-preview.webp',
-    imageAlt: 'Titlania ongoing product project preview',
-    status: 'IN DEVELOPMENT',
-    description: 'An ongoing independent product. More information will be shared when the work is ready.',
-    tags: ['Ongoing project'],
+    imageAlt: 'Titlania support-widget homepage showing live chat and instant answers',
+    status: 'LIVE',
+    description:
+      'A support widget for websites that answers routine questions instantly in the visitor’s browser, then hands live chats and tickets to a human team with the context intact. Currently in free public beta.',
+    tags: ['Support widget', 'Live chat', 'Browser-local', 'Cloudflare'],
   },
 ]
