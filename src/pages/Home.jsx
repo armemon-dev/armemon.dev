@@ -123,22 +123,16 @@ export default function Home() {
           <section className="content-section about-copy" id="about" aria-labelledby="about-heading">
             <SectionHeading id="about">About</SectionHeading>
             <Reveal as="p">
-              I build software on my own, web and mobile both, and I’ve been at it long enough now to know which parts I’m good at.
+              I build reliable web and mobile applications that help businesses work more efficiently and turn ideas into practical digital products.
             </Reveal>
             <Reveal as="p" delay={70}>
-              I started with C++ in 2019, mostly out of curiosity about what was going on underneath an interface before I ever tried to build one. I came back to development properly in 2023 and settled into JavaScript, React Native and Firebase.
+              I can help with business-management apps, internal tools, dashboards, document workflows, and custom web or mobile experiences. I handle the complete process, including product planning, interface design, development, deployment, and ongoing maintenance.
             </Reveal>
             <Reveal as="p" delay={140}>
-              The first thing anyone paid me for was an Android app for a snacks and confectionery distributor. It kept the invoices, the customers, the stock, the staff and their salaries, the cash and bank records, and enough analytics to see how the month was going. It had to work with no connection, and it had to move a year of records onto a new phone without losing anything, so that’s what I built.
+              I have delivered a paid Android business application and built and maintain live independent products used in the browser. My main tools include JavaScript, TypeScript, React, React Native, Next.js, Firebase, and Cloudflare Workers.
             </Reveal>
             <Reveal as="p" delay={200}>
-              <a className="inline-link" href="https://withinbench.com" target="_blank" rel="noreferrer">WithinBench</a> is where most of my time goes now. It’s free, it’s live, and there are 119 tools in it plus six document workflows that turn out proper professional files. The work happens in the browser instead of on my server, which was harder to build and better for the people using it. I do all of it. Product, interface, code, deploys, the privacy policy, everything.
-            </Reveal>
-            <Reveal as="p" delay={250}>
-              I’m early in my career. I’m not new at it. Most of what I know I taught myself, which for me means staying on a problem until I understand the reasoning behind the fix and not just the fix. I ship things, I keep them running, and I can tell you why any decision in my code is the way it is. AI tooling is part of how I get through this much work alone, and it doesn’t change who answers for the result.
-            </Reveal>
-            <Reveal as="p" delay={300}>
-              <a className="inline-link" href="https://titlania.com" target="_blank" rel="noreferrer">Titlania</a> is next.
+              My focus is understanding the real problem, building a clear solution, and delivering software that is reliable, easy to use, and ready to grow.
             </Reveal>
           </section>
 
